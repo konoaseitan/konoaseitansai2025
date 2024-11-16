@@ -1,27 +1,30 @@
-function openTab(evt, tabName) {
-    var i, tabcontent, tabbuttons;
+function openTab(event, tabId) {
+    // タブボタンのアクティブ状態を更新
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(button => button.classList.remove('active'));
+    event.currentTarget.classList.add('active');
 
-    // タブコンテンツを全て非表示にする
-    tabcontent = document.getElementsByClassName("tab-content");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
+    // タブコンテンツを非表示にする
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(content => content.style.display = 'none');
 
-    // 全てのタブボタンから "active" クラスを削除する
-    tabbuttons = document.getElementsByClassName("tab-button");
-    for (i = 0; i < tabbuttons.length; i++) {
-        tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
-    }
+    // 指定されたタブコンテンツを表示
+    const selectedTab = document.getElementById(tabId);
+    selectedTab.style.display = 'block';
 
-    // 指定されたタブを表示し、対応するボタンに "active" クラスを追加する
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
+    // タブコンテンツの位置にスクロール (調整付き)
+    const yOffset = -100; // 調整したいスクロール位置のオフセット値 (例: -100px)
+    const yPosition = selectedTab.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: yPosition, behavior: 'smooth' });
 }
+
 
 // モーダルウィンドウの初期状態は非表示
 window.onload = function() {
     var modal = document.getElementById("imageModal");
     modal.style.display = "none"; // 初期状態で非表示
+    window.scrollTo(0, 0);
 };
 
 // 画像をクリックしてモーダルウィンドウを開く処理
