@@ -30,7 +30,12 @@ p {
     margin-bottom: 20px;
     background-color: #f8f8f8;
     border-bottom: 2px solid #ccc;
+    position: sticky; /* スクロールで固定 */
+    top: 0; /* 固定位置（ページ上部） */
+    z-index: 1000; /* 他の要素の上に表示 */
+    padding: 10px 0;
 }
+
 
 .tab-button {
     flex: 1; /* 各タブボタンを同じ幅に設定 */
