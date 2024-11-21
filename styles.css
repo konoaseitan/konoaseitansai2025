@@ -131,7 +131,7 @@ p {
 .modal {
     display: none; /* デフォルトでは非表示 */
     position: fixed;
-    z-index: 1; /* 他のコンテンツより前に表示 */
+    z-index: 2000; /* タブメニューより前に表示するため、z-indexを1000より大きく */
     left: 0;
     top: 0;
     width: 100%;
@@ -144,6 +144,7 @@ p {
     padding: 20px;
     cursor: pointer; /* カーソルをポインタに設定 */
 }
+
 
 .modal-content {
     margin: auto;
