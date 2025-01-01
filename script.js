@@ -28,7 +28,7 @@ window.onload = function() {
 };
 
 // 画像をクリックしてモーダルウィンドウを開く処理
-document.querySelectorAll('.gallery-item img').forEach(img => {
+document.querySelectorAll('.gallery-item1 img').forEach(img => {
     img.addEventListener('click', function () {
         var modal = document.getElementById("imageModal");
         var modalImg = document.getElementById("modalImg");
@@ -40,6 +40,41 @@ document.querySelectorAll('.gallery-item img').forEach(img => {
     });
 });
 
+document.querySelectorAll('.gallery-item2 img').forEach(img => {
+    img.addEventListener('click', function () {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImg");
+        var captionText = document.getElementById("caption");
+
+        modal.style.display = "flex"; // クリック時にモーダルを表示
+        modalImg.src = this.src; // クリックされた画像をモーダルに表示
+        captionText.innerHTML = this.getAttribute("data-comment"); // コメントを表示
+    });
+});
+
+document.querySelectorAll('.gallery-item3 img').forEach(img => {
+    img.addEventListener('click', function () {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImg");
+        var captionText = document.getElementById("caption");
+
+        modal.style.display = "flex"; // クリック時にモーダルを表示
+        modalImg.src = this.src; // クリックされた画像をモーダルに表示
+        captionText.innerHTML = this.getAttribute("data-comment"); // コメントを表示
+    });
+});
+
+document.querySelectorAll('.gallery-item4 img').forEach(img => {
+    img.addEventListener('click', function () {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImg");
+        var captionText = document.getElementById("caption");
+
+        modal.style.display = "flex"; // クリック時にモーダルを表示
+        modalImg.src = this.src; // クリックされた画像をモーダルに表示
+        captionText.innerHTML = this.getAttribute("data-comment"); // コメントを表示
+    });
+});
 
 // モーダルの背景をクリックしたときにモーダルを閉じる処理
 document.getElementById("imageModal").addEventListener('click', function (event) {
