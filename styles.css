@@ -24,6 +24,15 @@ p {
     margin-right: auto;
 }
 
+a {
+    color: #333;
+    margin-bottom: 4px;
+    font-size: 1em;
+    max-width: 66.66%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .tab-menu {
     display: flex;
     justify-content: center;
@@ -103,7 +112,7 @@ p {
 }
 
 
-.gallery-item {
+.gallery-item1 {
     width: 50%;
     max-width: 300px;
     box-sizing: border-box;
@@ -114,7 +123,40 @@ p {
     background-color: #fffb00; /* フレームの背景色 */
 }
 
-.gallery-item img {
+.gallery-item2 {
+    width: 80%;
+    max-width: 600%;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 4px solid #eb9aff; /* フレームの幅と色 */
+    border-radius: 10px; /* フレームの角を丸める（オプション） */
+    padding: 5px; /* 画像とフレームの間のスペース */
+    background-color: #fffb00; /* フレームの背景色 */
+}
+
+.gallery-item3 {
+    width: 65%;
+    max-width: 450px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 4px solid #eb9aff; /* フレームの幅と色 */
+    border-radius: 10px; /* フレームの角を丸める（オプション） */
+    padding: 5px; /* 画像とフレームの間のスペース */
+    background-color: #fffb00; /* フレームの背景色 */
+}
+
+.gallery-item4 {
+    width: 62%;
+    max-width: 410px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 4px solid #eb9aff; /* フレームの幅と色 */
+    border-radius: 10px; /* フレームの角を丸める（オプション） */
+    padding: 5px; /* 画像とフレームの間のスペース */
+    background-color: #fffb00; /* フレームの背景色 */
+}
+
+.gallery-item1 img {
     width: 100%;
     height: auto;
     display: block;
@@ -122,8 +164,31 @@ p {
     image-rendering: crisp-edges; /* 一部のブラウザでの最適化 */
 }
 
+.gallery-item2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    image-rendering: -webkit-optimize-contrast; /* Chromeでの最適化 */
+    image-rendering: crisp-edges; /* 一部のブラウザでの最適化 */
+}
 
-.gallery-item img:hover {
+.gallery-item3 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    image-rendering: -webkit-optimize-contrast; /* Chromeでの最適化 */
+    image-rendering: crisp-edges; /* 一部のブラウザでの最適化 */
+}
+
+.gallery-item4 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    image-rendering: -webkit-optimize-contrast; /* Chromeでの最適化 */
+    image-rendering: crisp-edges; /* 一部のブラウザでの最適化 */
+}
+
+.gallery-item1 img:hover {
     transform: scale(1.05);
 }
 
