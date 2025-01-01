@@ -156,6 +156,17 @@ a {
     background-color: #fffb00; /* フレームの背景色 */
 }
 
+.gallery-item5 {
+    width: 50%;
+    max-width: 300px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 4px solid #eb9aff; /* フレームの幅と色 */
+    border-radius: 10px; /* フレームの角を丸める（オプション） */
+    padding: 5px; /* 画像とフレームの間のスペース */
+    background-color: #fffb00; /* フレームの背景色 */
+}
+
 .gallery-item1 img {
     width: 100%;
     height: auto;
@@ -181,6 +192,14 @@ a {
 }
 
 .gallery-item4 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    image-rendering: -webkit-optimize-contrast; /* Chromeでの最適化 */
+    image-rendering: crisp-edges; /* 一部のブラウザでの最適化 */
+}
+
+.gallery-item5 img {
     width: 100%;
     height: auto;
     display: block;
